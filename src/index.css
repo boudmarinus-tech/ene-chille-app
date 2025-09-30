@@ -1,0 +1,188 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+:root{
+  --brand:#111827;         /* diep donker */
+  --brand-accent:#ef4444;  /* chili-rood */
+  --muted:#6b7280;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --radius:14px;
+}
+
+body { background: var(--bg); }
+
+.container{
+  max-width: 920px; margin: 24px auto; padding: 16px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:#0f172a;
+}
+
+.header{
+  display:flex; align-items:center; gap:14px; margin-bottom:18px;
+}
+.badge{
+  background:var(--brand-accent); color:white; font-weight:700;
+  letter-spacing:.08em; padding:6px 10px; border-radius:999px; font-size:12px;
+}
+.title{ font-size: clamp(22px, 3vw, 30px); font-weight:800; color:var(--brand); }
+.subtitle{ color:var(--muted); font-size:14px; }
+
+.card{
+  background:var(--card); border:1px solid #e5e7eb; border-radius: var(--radius);
+  padding:16px; box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+.grid{ display:grid; gap:12px; }
+@media (min-width: 800px){ .grid-2{ grid-template-columns: 1fr 1fr; } }
+
+.btn{
+  appearance:none; border:1px solid #e5e7eb; background:#111827; color:white;
+  padding:10px 14px; border-radius:10px; font-weight:600; cursor:pointer;
+}
+.btn.secondary{ background:white; color:#111827; }
+.btn:disabled{ opacity:.6; cursor:not-allowed; }
+
+.select, .input, textarea{
+  width:100%; padding:10px 12px; border:1px solid #e5e7eb; border-radius:10px; background:white;
+}
+.small{ font-size:12px; color:var(--muted); }
+.row{ display:flex; gap:10px; align-items:center; }
+
+.bar{
+  height:10px; background:#e5e7eb; border-radius:999px; overflow:hidden;
+}
+.bar > div{ height:100%; background:var(--brand-accent); }
+
+.qr{
+  width:160px; height:160px; border:1px solid #e5e7eb; border-radius:12px;
+}
+.section-title{ font-weight:800; font-size:16px; margin:6px 0 8px; color:var(--brand); }
+.kicker{ font-weight:700; color:var(--brand-accent); }
+/* Forceer lichte UI-kleuren voor form controls */
+:root { color-scheme: light; }
+
+/* Inputs & selects: altijd donker tekst, witte achtergrond */
+.select, .input, textarea {
+  color: #111827;                  /* donkere tekst */
+  background: #ffffff;             /* witte achtergrond */
+  border: 1px solid #cbd5e1;       /* slate-300 */
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+/* Duidelijke focus-staat */
+.select:focus, .input:focus, textarea:focus {
+  outline: none;
+  border-color: #ef4444;           /* chili-rood */
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, .15);
+}
+
+/* Placeholder goed zichtbaar */
+.input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;                  /* slate-400 */
+  opacity: 1;
+}
+
+/* Dropdown-pijltje en extra padding rechts */
+.select {
+  appearance: none;                /* uniform look */
+  background-image:
+    linear-gradient(45deg, transparent 50%, #6b7280 50%),
+    linear-gradient(135deg, #6b7280 50%, transparent 50%),
+    linear-gradient(#e5e7eb, #e5e7eb);
+  background-position:
+    calc(100% - 16px) calc(50% - 3px),
+    calc(100% - 10px) calc(50% - 3px),
+    calc(100% - 22px) 50%;
+  background-size: 6px 6px, 6px 6px, 1px 60%;
+  background-repeat: no-repeat;
+  padding-right: 34px;
+}
+
+/* Items in dropdown zelf (waar mogelijk) */
+select option {
+  color: #111827;
+  background: #ffffff;
+}
+
+/* Disabled states */
+.select:disabled, .input:disabled, textarea:disabled {
+  background: #f1f5f9;             /* slate-100 */
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Fix voor auto-fill (Chrome) die witte tekst kan geven */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #111827;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
