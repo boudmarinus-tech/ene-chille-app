@@ -9,6 +9,7 @@ import Results from "./pages/Results.jsx";
 import Agenda from "./pages/Agenda.jsx";
 import Season from "./pages/Season.jsx";
 import Attendance from "./pages/Attendance.jsx";
+import Standings from "./pages/Standings.jsx";
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: "/agenda", element: <Agenda /> },
       { path: "/season", element: <Season /> },
       { path: "/attendance", element: <Attendance /> },
+      { path: "/standings", element: <Standings /> },
     ],
   },
 ]);

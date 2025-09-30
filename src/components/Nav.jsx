@@ -35,6 +35,11 @@ export default function Nav() {
       <NavLink to="/season" className={linkClass}>
         Jaaroverzicht
       </NavLink>
+
+      <NavLink to="/standings" className={linkClass}>
+      Stand
+      </NavLink>
+
     </div>
   );
 }
